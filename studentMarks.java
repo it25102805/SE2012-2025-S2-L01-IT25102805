@@ -16,8 +16,9 @@ public class studentMarks {
             System.out.println("3. Average of a subject");
             System.out.println("4. Average of a student");
             System.out.println("5. Total marks of students");
-            System.out.println("6. View Data");
-            System.out.println("7. Exit");
+            System.out.println("6. View Marks");
+            System.out.println("7. View Grades ");
+            System.out.println("8. Exit ");
 
             System.out.print("\nEnter your choice : ");
             int choice = scanner.nextInt();
@@ -115,6 +116,46 @@ public class studentMarks {
                     break;
 
                 case 7:
+                    System.out.println("\nID\tMathematics\tChemistry\tPhysics");
+                    for (int i = 0; i < numberOfStudents ; i++) {
+                        String mathGrade;
+                        if (marks[i][0] >= 75) {
+                            mathGrade = "A";
+                        } else if (marks[i][0] >= 65){
+                            mathGrade = "B";
+                        } else if (marks[i][0] >= 55){
+                            mathGrade = "C";
+                        } else {
+                            mathGrade = "Fail";
+                        }
+
+                        String chemGrade;
+                        if (marks[i][1] >= 75) {
+                            chemGrade = "A";
+                        } else if (marks[i][1] >= 65){
+                            chemGrade = "B";
+                        } else if (marks[i][1] >= 55){
+                            chemGrade = "C";
+                        } else {
+                            chemGrade = "Fail";
+                        }
+
+                        String phy6Grade;
+                        if (marks[i][2] >= 75) {
+                            phy6Grade = "A";
+                        } else if (marks[i][2] >= 65){
+                            phy6Grade = "B";
+                        } else if (marks[i][2] >= 55){
+                            phy6Grade = "C";
+                        } else {
+                            phy6Grade = "Fail";
+                        }
+
+                        System.out.println((i+1) + "\t" + mathGrade + "\t\t" + chemGrade + "\t\t" + phy6Grade);
+                    }
+
+                    break;
+                case 8:
                     scanner.close();
                     return;
 
